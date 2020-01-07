@@ -54,7 +54,8 @@ $indicator-color: #1da0f2;
             }
 
             .project-title{
-                height: 15vh;
+                display: block;
+                min-height: 15vh;
                 text-align: center;
                 font-size: var(--fz-small);
             }
