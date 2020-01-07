@@ -1,0 +1,86 @@
+//Common layout rules
+.developer-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #title{
+        margin-bottom: 1rem;
+        padding: .5rem;
+        text-align: center;
+    }
+
+    #description{
+        margin-bottom: 2rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #click_projects{
+        cursor: pointer;
+    }
+    
+}
+
+//Layout rules for mobiles devices and tablet's
+@media screen and (max-width: 768px){
+    #title{
+        font-size: var(--fz-medium);
+    }
+
+    #description{
+        font-size: var(--fz-small);
+    }
+    
+    #swipe_projects{
+        font-size: 1rem;
+
+        .iconify{
+            font-size: .75rem;
+        }
+    }
+
+    #click_projects{
+        display: none;
+    }
+}
+
+//Layout rules for desktops and laptops
+@media screen and (min-width: 800px) and (max-width: 2000px){
+
+    #title{
+        font-size: var(--fz-large);
+    }
+
+    #description{
+        font-size: var(--fz-small);
+    }
+
+    #swipe_projects{ display: none;}
+
+    #click_projects{
+        font-size: var(--fz-medium);
+    }
+
+}
+
+//Layout rules for bigger screens
+@media screen and (min-width:2001px){
+
+    #title{
+        font-size: var(--fz-xlarge);
+    }
+
+    #description{
+        font-size: var(--fz-medium);
+    }
+
+    #swipe_projects{ display: none;}
+
+    #click_projects{
+        font-size: var(--fz-large);
+    }
+
+}

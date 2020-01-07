@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leonardo Bravo Portfolio</title>
+    <link rel="stylesheet" href="./styles/css/main.min.css">
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+    <div class="developer-section animated fadeIn" id="developer">
+        <h1 id="title">Hello, I'm Leonardo</h1>
+        <p id="description">and i am a Front End developer</p>
+        <p id="swipe_projects" class="animated pulse">
+            <span class="iconify" data-icon="vaadin:angle-double-left" data-inline="false"></span>
+            Swipe to view projects
+            <span class="iconify" data-icon="vaadin-angle-double-right" data-inline="false"></span>
+        </p>
+        <span id="click_projects" class="iconify animated pulse" data-icon="fa:angle-double-down" data-inline="false"></span>
+    </div>
+
+    <div class="projects-section hidden-section animated fadeIn" id="dev-projects">
+        <div id="indicator"></div>
+        <div id="projects"></div>   
+    </div>
+
+    <div class="about-section hidden-section animated fadeIn" id="about">
+        <h2>My skills</h2>
+        <div class="stack">
+            <span class="iconify" data-icon="bx:bxl-react" data-inline="false"></span>
+            <span class="iconify" data-icon="bx:bxl-redux" data-inline="false"></span>
+            <span class="iconify" data-icon="fa-brands:sass" data-inline="false"></span>
+            <span class="iconify" data-icon="ant-design:html5-fill" data-inline="false"></span>
+            <span class="iconify" data-icon="bx:bxl-css3" data-inline="false"></span>
+            <span class="iconify" data-icon="bx:bxl-javascript" data-inline="false"></span>
+            <span class="iconify" data-icon="bx:bxl-nodejs" data-inline="false"></span>
+            <span class="iconify" data-icon="bx:bxl-git" data-inline="false"></span>
+            <span class="iconify" data-icon="mdi:webpack" data-inline="false"></span>
+        </div>
+        <h3>Let's work together</h3>
+        <div class="social-media">
+            <a href="https://github.com/jleonardo007" target="_blank"><span class="iconify" data-icon="mdi:github-circle" data-inline="false"></span></a>
+            <a href="https://codepen.io/jleonardo007" target="_blank"><span class="iconify" data-icon="mdi:codepen" data-inline="false"></span></a>
+            <a href="https://www.freecodecamp.org/jleo92" target="_blank"><span class="iconify" data-icon="fa-brands:free-code-camp" data-inline="false"></span></a>
+            <a href="https://www.linkedin.com/in/jleonardo-bravo/" target="_blank"><span class="iconify" data-icon="mdi:linkedin" data-inline="false"></span></a>
+        </div>
+        <p>You can send me a email to: <span class="email">j.leonardo.bravo@gmail.com</span></p>
+    </div>
+<script type="module" src="./js/projects_collection.js"></script>
+<script type="module" src="./js/UI.js"></script>
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>
