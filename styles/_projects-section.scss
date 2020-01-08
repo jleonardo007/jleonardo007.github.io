@@ -1,6 +1,6 @@
 //Common layout rules
 $boder-color: #5a4894;
-$indicator-color: #1da0f2;
+$indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
 .project-image,.project-stack,.project-title{
     border: 2px solid $boder-color;
 }
@@ -17,6 +17,7 @@ $indicator-color: #1da0f2;
     justify-content: center;
     align-items: center;
 }
+
 
 #indicator{
     width: 0%;
@@ -68,7 +69,7 @@ $indicator-color: #1da0f2;
 //Layout rules for desktops and laptops
 @media screen and (min-width: 800px) and (max-width: 1366px){
     .projects-section{
-
+        min-height: 100vh;
         #projects-title{
             padding: .5rem;
             text-align: center;
@@ -103,7 +104,7 @@ $indicator-color: #1da0f2;
 //Bigger screens
 @media screen and (min-width: 1367px){
     .projects-section{
-
+        min-height: 100vh;
         #projects-title{
             padding: 1rem;
             text-align: center;
