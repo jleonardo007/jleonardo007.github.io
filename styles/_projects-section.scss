@@ -2,18 +2,6 @@
 $boder-color: #5a4894;
 $indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
 
-#projects{
-    border: 2px solid $boder-color;
-    border-radius: 1.5rem;
-
-    a{
-        img{
-            border-top-left-radius: 1.5rem;
-            border-top-right-radius: 1.5rem;
-        }
-    }
-}
-
 .project-stack{
     border-top-width: 0;
 }
@@ -28,6 +16,28 @@ $indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
     align-items: center;
 }
 
+.projects-section{
+    min-height: 100vh;
+}
+
+#projects{
+    border: 2px solid $boder-color;
+    border-radius: 1.5rem;
+
+    a{
+        img{
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+    }
+}
+
+#projects-title{
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
 #indicator{
     width: 0%;
     position: sticky;
@@ -39,12 +49,9 @@ $indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
 //layout rules for mobile devices and tablet's
 @media screen and (max-width: 768px){
     .projects-section{
-        min-height: 100vh;
 
-        #projects-title,.project-title{
-            text-align: center;
+        #projects-title{
             font-size: var(--fz-medium);
-            text-transform: capitalize;
         }
 
         #projects{
@@ -77,10 +84,8 @@ $indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
 //Layout rules for desktops and laptops
 @media screen and (min-width: 800px) and (max-width: 1366px){
     .projects-section{
-        min-height: 100vh;
+
         #projects-title{
-            padding: .5rem;
-            text-align: center;
             font-size: var(--fz-medium);
         }
 
@@ -112,10 +117,8 @@ $indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
 //Bigger screens
 @media screen and (min-width: 1367px){
     .projects-section{
-        min-height: 100vh;
+
         #projects-title{
-            padding: 1rem;
-            text-align: center;
             font-size: var(--fz-medium);
         }
     
