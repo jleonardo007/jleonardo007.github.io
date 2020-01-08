@@ -105,9 +105,9 @@ devSection.addEventListener('touchmove', e =>{
             projectIndex = 0
             ui.toggleSections(devSection,projectsSection)
         }
-        ui.handleIndicator(indicator,projectIndex,projects)
-        ui.addProjects(projects,projectIndex)
     }
+    ui.handleIndicator(indicator,projectIndex,projects)
+    ui.addProjects(projects,projectIndex)
 })
 
 projectsSection.addEventListener('touchmove', e =>{
@@ -116,7 +116,7 @@ projectsSection.addEventListener('touchmove', e =>{
     diffX = currentX - referenceX
     diffY = currentY - referenceY
     
-    if(diffX < 0 && currentX > 0 && diffY > -5 && diffY < 5){
+    if(diffX < 0 && diffY > -5 && diffY < 5){
         projectIndex++
         if(projectIndex > projects.length - 1){
             projectIndex = projects.length - 1
@@ -156,7 +156,7 @@ aboutSection.addEventListener('touchmove', e =>{
     if(diffX > 0 && diffY > -5 && diffY < 5){
         projectIndex = projects.length - 1
         ui.toggleSections(aboutSection,projectsSection)
-        ui.addProjects(projects,projectIndex)
-        ui.handleIndicator(indicator,projectIndex,projects)
     }
+    ui.addProjects(projects,projectIndex)
+    ui.handleIndicator(indicator,projectIndex,projects)
 })
