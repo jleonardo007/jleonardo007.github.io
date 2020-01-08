@@ -110,7 +110,9 @@ devSection.addEventListener('touchmove', e =>{
 
 projectsSection.addEventListener('touchmove', e =>{
     currentX = e.touches[0].clientX
+    currentY = e.touches[0].clientY
     diffX = currentX - referenceX
+    diffY = currentY - referenceY
     
     if(diffX < 0 && currentX > 0 && diffY == 0){
         projectIndex++
@@ -143,7 +145,9 @@ projectsSection.addEventListener('touchmove', e =>{
 
 aboutSection.addEventListener('touchmove', e =>{
     currentX = e.touches[0].clientX
+    currentY = e.touches[0].clientY
     diffX = currentX - referenceX
+    diffY = currentY - referenceY
 
     if(diffX > 0 && diffY == 0){
         projectIndex = projects.length - 1
