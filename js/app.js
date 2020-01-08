@@ -125,7 +125,7 @@ projectsSection.addEventListener('touchmove', e =>{
         ui.addProjects(projects,projectIndex)
         ui.handleIndicator(indicator,projectIndex,projects)
     }
-    else if(currentX > 0 && diffY > -5 && diffY < 5){
+    else if(diffY > -5 && diffY < 5){
         projectIndex--
         if(projectIndex < 0) {
             projectIndex = 0
