@@ -15,11 +15,18 @@ let showAboutSection = false
 let referenceX = 0
 let currentX = 0
 let diffX = 0
+let referenceY = 0
+let currentY = 0
+let diffY = 0
+
 
 const restetSwipeParameters = () => {
     referenceX = 0
     currentX = 0
     diffX = 0
+    referenceY = 0
+    currentY = 0
+    diffY = 0
 }
 
 //Click the angle-down button
@@ -79,6 +86,7 @@ aboutSection.addEventListener('wheel', e =>{
 //Handle finger swipe detection 
 document.addEventListener('touchstart', e =>{
     referenceX = e.touches[0].clientX
+    referenceY = e.touches[0].clientY
 })
 
 document.addEventListener('touchend', () =>{
@@ -87,9 +95,11 @@ document.addEventListener('touchend', () =>{
 
 devSection.addEventListener('touchmove', e =>{
     currentX = e.touches[0].clientX
+    currentY = e.touches[0].clientY
     diffX = currentX - referenceX
-
-    if(diffX < 0){
+    diffY = currentY - referenceY
+    console.log(diffY)
+    if(diffX < 0 && diffY == 0 ){
         projectIndex--
         if(projectIndex < 0 ) projectIndex = 0
         ui.toggleSections(devSection,projectsSection)
@@ -102,14 +112,14 @@ projectsSection.addEventListener('touchmove', e =>{
     currentX = e.touches[0].clientX
     diffX = currentX - referenceX
     
-    if(diffX < 0 && currentX > 0){
+    if(diffX < 0 && currentX > 0 && diffY == 0){
         projectIndex++
         if(projectIndex > projects.length - 1){
             projectIndex = projects.length - 1
             showAboutSection = true
         }
     }
-    else if(diffX > 0){
+    else if(currentX > 0 && diffY == 0){
         projectIndex--
         if(projectIndex < 0) {
             projectIndex = 0
@@ -135,7 +145,7 @@ aboutSection.addEventListener('touchmove', e =>{
     currentX = e.touches[0].clientX
     diffX = currentX - referenceX
 
-    if(diffX > 0 && currentX > 0){
+    if(diffX > 0 && diffY == 0){
         projectIndex = projects.length - 1
         ui.toggleSections(aboutSection,projectsSection)
     }
