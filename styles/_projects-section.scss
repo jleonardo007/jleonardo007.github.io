@@ -42,7 +42,7 @@ $indicator-color: #1da0f2;
             margin: 0 1rem;
             
             .project-stack{
-                height: 30vh;
+                min-height: 30vh;
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
                 justify-items: center;
@@ -54,7 +54,6 @@ $indicator-color: #1da0f2;
             }
 
             .project-title{
-                display: block;
                 min-height: 15vh;
                 text-align: center;
                 font-size: var(--fz-small);
@@ -67,7 +66,7 @@ $indicator-color: #1da0f2;
 }
 
 //Layout rules for desktops and laptops
-@media screen and (min-width: 800px) and (max-width: 1365px){
+@media screen and (min-width: 800px) and (max-width: 1366px){
     .projects-section{
 
         #projects-title{
@@ -102,7 +101,7 @@ $indicator-color: #1da0f2;
 }
 
 //Bigger screens
-@media screen and (min-width: 1366px){
+@media screen and (min-width: 1367px){
     .projects-section{
 
         #projects-title{
@@ -112,7 +111,7 @@ $indicator-color: #1da0f2;
         }
     
         #projects{
-            max-width: 40vw;
+            max-width: 50vw;
             margin: 0 auto;
             .project-stack{
                 height: 15vh;
@@ -128,7 +127,7 @@ $indicator-color: #1da0f2;
             .project-title{
                 height: 10vh;
                 text-align: center;
-                font-size: var(--fz-small);
+                font-size: var(--fz-medium);
             }
         }
     }
