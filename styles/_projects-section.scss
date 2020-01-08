@@ -1,13 +1,23 @@
 //Common layout rules
 $boder-color: #5a4894;
 $indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
-.project-image,.project-stack,.project-title{
+
+#projects{
     border: 2px solid $boder-color;
+    border-radius: 1.5rem;
+
+    a{
+        img{
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+    }
 }
 
 .project-stack{
     border-top-width: 0;
 }
+
 .project-stack,.project-image{
     border-bottom-width: 0;
 }
@@ -17,7 +27,6 @@ $indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
     justify-content: center;
     align-items: center;
 }
-
 
 #indicator{
     width: 0%;

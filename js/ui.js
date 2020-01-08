@@ -5,7 +5,7 @@ export default class UI{
         const project = projectsCollection[index]
        projects.innerHTML =
        `
-            <h1 id="projects-title" class="">Projects</h1>
+
             <a href=${project.url} target="_blank" class="project-link animated fadeIn">
                 <img
                     class="project-image animated fadeIn"
