@@ -17,9 +17,9 @@ body{
 .projects-section{
 
     #projects{
-        box-shadow: 15px 20px 25px #000;
+        box-shadow: -15px -10px 20px #000;
         @media screen and (max-width: 460px) {
-            box-shadow: 7px 10px 12px #000;
+            box-shadow: -5px -5px 15px #000;
         }
         .project-stack{
             background: $bg-color2;
