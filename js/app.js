@@ -1,10 +1,10 @@
 import UI from './ui.js'
 import projects from './projects_collection.js'
+
 const ui = new UI()
 const devSection = document.querySelector('.developer-section')
 const projectsSection = document.querySelector('.projects-section')
 const aboutSection =  document.querySelector('.about-section')
-const indicator = document.getElementById('indicator')
 const click = document.getElementById('click_projects')
 
 let projectIndex = 0
@@ -32,8 +32,8 @@ const restetSwipeParameters = () => {
 //Click the angle-down button
 click.addEventListener('click', () =>{
     ui.toggleSections(devSection,projectsSection)
-    ui.handleIndicator(indicator,projectIndex,projects)
-    ui.addProjects(projects,projectIndex)
+    ui.handleIndicator(projectIndex)
+    ui.addProjects(projectIndex)
 })
 
 //Handle mouse wheel detection
@@ -41,8 +41,8 @@ devSection.addEventListener('wheel', e =>{
     if(e.deltaY > 0){
         ui.toggleSections(devSection,projectsSection)
     }
-    ui.handleIndicator(indicator,projectIndex,projects)
-    ui.addProjects(projects,projectIndex)
+    ui.handleIndicator(projectIndex)
+    ui.addProjects(projectIndex)
 })
 
 projectsSection.addEventListener('wheel', e =>{
@@ -56,7 +56,7 @@ projectsSection.addEventListener('wheel', e =>{
     else{
         projectIndex++
         if(projectIndex > projects.length - 1){
-            projectIndex = projects.length -1
+            projectIndex = projects.length - 1
             showAboutSection = true
         }
     }
@@ -70,8 +70,9 @@ projectsSection.addEventListener('wheel', e =>{
         ui.toggleSections(projectsSection,aboutSection)
         showAboutSection = false
     }
-    ui.addProjects(projects,projectIndex)
-    ui.handleIndicator(indicator,projectIndex,projects)
+    
+    ui.addProjects(projectIndex)
+    ui.handleIndicator(projectIndex)
 })
 
 aboutSection.addEventListener('wheel', e =>{
@@ -80,7 +81,7 @@ aboutSection.addEventListener('wheel', e =>{
         ui.toggleSections(aboutSection,projectsSection)
     }
 
-    ui.addProjects(projects,projectIndex)
+    ui.addProjects(projectIndex)
 })
 
 //Handle finger swipe detection 
@@ -106,8 +107,8 @@ devSection.addEventListener('touchmove', e =>{
             ui.toggleSections(devSection,projectsSection)
         }
     }
-    ui.handleIndicator(indicator,projectIndex,projects)
-    ui.addProjects(projects,projectIndex)
+    ui.handleIndicator(projectIndex)
+    ui.addProjects(projectIndex)
 })
 
 projectsSection.addEventListener('touchmove', e =>{
@@ -122,8 +123,8 @@ projectsSection.addEventListener('touchmove', e =>{
             projectIndex = projects.length - 1
             showAboutSection = true
         }
-        ui.addProjects(projects,projectIndex)
-        ui.handleIndicator(indicator,projectIndex,projects)
+        ui.addProjects(projectIndex)
+        ui.handleIndicator(projectIndex)
     }
     else if(diffY > -5 && diffY < 5){
         projectIndex--
@@ -131,8 +132,8 @@ projectsSection.addEventListener('touchmove', e =>{
             projectIndex = 0
             showDevSection = true
         }
-        ui.addProjects(projects,projectIndex)
-        ui.handleIndicator(indicator,projectIndex,projects)
+        ui.addProjects(projectIndex)
+        ui.handleIndicator(projectIndex)
     }
 
     if(diffX > 0 && showDevSection){
@@ -157,6 +158,6 @@ aboutSection.addEventListener('touchmove', e =>{
         projectIndex = projects.length - 1
         ui.toggleSections(aboutSection,projectsSection)
     }
-    ui.addProjects(projects,projectIndex)
-    ui.handleIndicator(indicator,projectIndex,projects)
+    ui.addProjects(projectIndex)
+    ui.handleIndicator(projectIndex)
 })

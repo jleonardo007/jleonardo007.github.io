@@ -1,15 +1,19 @@
+import projectsCollection from './projects_collection.js'
+
 const projects = document.getElementById('projects')
+const indicator = document.getElementById('indicator')
 
 export default class UI{
-    addProjects = (projectsCollection,index) =>{
+    addProjects = index =>{
+        
         const project = projectsCollection[index]
-       projects.innerHTML =
-       `
+        projects.innerHTML =
+        `
             <a href=${project.url} target="_blank" class="project-link animated fadeIn">
                 <img
                     class="project-image animated fadeIn"
                     src=${project.img}
-                    alt="project"
+                    alt="${project.title}"
                 />
             </a>
             <div class="project-stack animated fadeIn">
@@ -20,7 +24,7 @@ export default class UI{
                 }
             </div>
             <a class="project-title animated fadeIn" href="${project.url}" target="_blank">${project.title}</a>
-       `
+        `
     }
 
     toggleSections = (hideSection,showSection) =>{
@@ -28,11 +32,11 @@ export default class UI{
         showSection.classList.remove('hidden-section')
     }
 
-    handleIndicator = (element,index,projects) =>{
-        let maxWidth = projects.length
+    handleIndicator = index =>{
+        let maxWidth = projectsCollection.length
         let width = Math.round( (index + 1) * 100/maxWidth )
 
-        element.style.width = `${Math.round(width)}%`
+        indicator.style.width = `${Math.round(width)}%`
     }
 }
 
