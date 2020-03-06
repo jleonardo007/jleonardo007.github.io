@@ -1,7 +1,7 @@
 const projectsCollection = [
     {
         title: "React Pomodoro Clock",
-        url: "https://codepen.io/jleonardo007/pen/LYYqYOj",
+        url: "https://jleonardo007.github.io/pomodoro-clock",
         img: "https://screenshot.codepen.io/3454143.LYYqYOj.e3ad00d9-469f-45c8-970f-cef0d352eef8.png",
         stack: 
         [
@@ -15,7 +15,7 @@ const projectsCollection = [
     },
     {
         title: "React Calculator",
-        url: "https://codepen.io/jleonardo007/pen/BaaZQEN",
+        url: "https://jleonardo007.github.io/react-calculator",
         img: "https://screenshot.codepen.io/3454143.BaaZQEN.639445e0-2b54-4b38-b861-cd405dccf890.png",
         stack:
         [
@@ -29,7 +29,7 @@ const projectsCollection = [
     },
     {
         title: "React Drum Machine",
-        url: "https://codepen.io/jleonardo007/pen/ZEEyzmJ",
+        url: "https://jleonardo007.github.io/react-drum-machine",
         img: "https://screenshot.codepen.io/3454143.ZEEyzmJ.981c35aa-c69f-4ff4-82f0-b939cf2e176e.png",
         stack: 
         [
@@ -43,7 +43,7 @@ const projectsCollection = [
     },
     {
         title: "React Markdown Previewer",
-        url: "https://codepen.io/jleonardo007/pen/WNNQGEa",
+        url: "https://jleonardo007.github.io/markdown-previewer",
         img: "https://screenshot.codepen.io/3454143.WNNQGEa.826cc145-23f8-4c46-b1b2-45bea4cd7440.png",
         stack: 
         [
@@ -54,7 +54,7 @@ const projectsCollection = [
     },
     {
         title: "React Random Qoutes Machine",
-        url: "https://codepen.io/jleonardo007/pen/jONRYRX",
+        url: "https://jleonardo007.github.io/randomquotesmachine/",
         img: "https://screenshot.codepen.io/3454143.jONRYRX.8ab70c9a-0a24-4d26-9005-e8cc3f849e90.png",
         stack: 
         [
