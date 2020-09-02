@@ -29,7 +29,7 @@ const restetSwipeParameters = () => {
     diffY = 0
 }
 
-//Click the angle-down button
+//Click the angle-down button to show projects section
 click.addEventListener('click', () =>{
     ui.toggleSections(devSection,projectsSection)
     ui.handleIndicator(projectIndex)
