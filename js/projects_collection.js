@@ -1,123 +1,45 @@
 const projectsCollection = [
-    {
-        title: "React Pomodoro Clock",
-        url: "https://jleonardo007.github.io/pomodoro-clock",
-        img: "https://screenshot.codepen.io/3454143.LYYqYOj.e3ad00d9-469f-45c8-970f-cef0d352eef8.png",
-        stack: 
-        [
-            "bx:bxl-react",
-            "bx:bxl-redux",
-            "fa-brands:sass",
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    },
-    {
-        title: "React Calculator",
-        url: "https://jleonardo007.github.io/react-calculator",
-        img: "https://screenshot.codepen.io/3454143.BaaZQEN.639445e0-2b54-4b38-b861-cd405dccf890.png",
-        stack:
-        [
-            "bx:bxl-react",
-            "bx:bxl-redux",
-            "fa-brands:sass",
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    },
-    {
-        title: "React Drum Machine",
-        url: "https://jleonardo007.github.io/react-drum-machine",
-        img: "https://screenshot.codepen.io/3454143.ZEEyzmJ.981c35aa-c69f-4ff4-82f0-b939cf2e176e.png",
-        stack: 
-        [
-            "bx:bxl-react",
-            "bx:bxl-redux",
-            "fa-brands:sass",
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    },
-    {
-        title: "React Markdown Previewer",
-        url: "https://jleonardo007.github.io/markdown-previewer",
-        img: "https://screenshot.codepen.io/3454143.WNNQGEa.826cc145-23f8-4c46-b1b2-45bea4cd7440.png",
-        stack: 
-        [
-            "bx:bxl-react",
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-        ]
-    },
-    {
-        title: "React Random Qoutes Machine",
-        url: "https://jleonardo007.github.io/randomquotesmachine/",
-        img: "https://screenshot.codepen.io/3454143.jONRYRX.8ab70c9a-0a24-4d26-9005-e8cc3f849e90.png",
-        stack: 
-        [
-            "bx:bxl-react",
-            "bx:bxl-redux",
-            "bx:bxl-css3"
-        ]
-    },
-    {
-        title: "Personal Portfolio Template",
-        url: "https://codepen.io/jleonardo007/full/WNeXrYr",
-        img: "https://screenshot.codepen.io/3454143.WNeXrYr.f42d0928-0647-4331-af37-36dcc77d3698.png",
-        stack: 
-        [
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    },
-    {
-        title: "Landing Page",
-        url: "https://codepen.io/jleonardo007/pen/vYBJwzy",
-        img: "https://screenshot.codepen.io/3454143.vYBJwzy.76a68252-173a-4b81-ae58-1c12728fca8c.png",
-        stack: 
-        [
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    },
-    {
-        title: "Coming Soon Page",
-        url: "https://codepen.io/jleonardo007/pen/vYENmKB",
-        img: "https://screenshot.codepen.io/3454143.vYENmKB.0e6d6b65-e1e9-4e54-9887-bd5ce0dfaf7b.png",
-        stack: 
-        [
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    },
-    {
-        title: "Coming Soon Page",
-        url: "https://codepen.io/jleonardo007/pen/xxbGWOV",
-        img: "https://screenshot.codepen.io/3454143.xxbGWOV.a11bb4dc-2fa2-41b9-9116-91409db5ee26.png",
-        stack: 
-        [
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    },
-    {
-        title: "Survey Form",
-        url: "https://codepen.io/jleonardo007/pen/mdbMGPo",
-        img: "https://screenshot.codepen.io/3454143.mdbMGPo.ea61c2d6-39cf-4767-a8d3-a07a47af7382.png",
-        stack: 
-        [
-            "ant-design:html5-fill",
-            "bx:bxl-css3",
-            "bx:bxl-javascript"
-        ]
-    }
-]
+  {
+    title: "React Pomodoro Clock",
+    url: "https://jleonardo007.github.io/pomodoro-clock",
+    imgPath: "./projects-images/pomodoro-clock.png",
+  },
+  {
+    title: "React Calculator",
+    url: "https://jleonardo007.github.io/react-calculator",
+    imgPath: "./projects-images/calculator.png",
+  },
+  {
+    title: "React Drum Machine",
+    url: "https://jleonardo007.github.io/react-drum-machine",
+    imgPath: "./projects-images/drum-machine.png",
+  },
+  {
+    title: "React Markdown Previewer",
+    url: "https://jleonardo007.github.io/markdown-previewer",
+    imgPath: "./projects-images/markdown-previewer.png",
+  },
+  {
+    title: "React Random Qoutes Machine",
+    url: "https://jleonardo007.github.io/randomquotesmachine/",
+    imgPath: "./projects-images/quotes-machine.png",
+  },
 
-export default projectsCollection
+  {
+    title: "Coming Soon Page",
+    url: "https://codepen.io/jleonardo007/pen/vYENmKB",
+    imgPath: "./projects-images/count-down2.png",
+  },
+  {
+    title: "Coming Soon Page",
+    url: "https://codepen.io/jleonardo007/pen/xxbGWOV",
+    imgPath: "./projects-images/count-down1.png",
+  },
+  {
+    title: "Survey Form",
+    url: "https://codepen.io/jleonardo007/pen/mdbMGPo",
+    imgPath: "./projects-images/survey-form.png",
+  },
+];
+
+export default projectsCollection;
