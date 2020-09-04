@@ -14,19 +14,22 @@ export default class UI {
       background-position: center;
     `;
 
+    const addClassesIfRepoExist =
+      item.projectRepository == null ? "display: none" : null;
+
     projects.innerHTML = `
             <article class="project-item">
               <div class="project-item__img" style="${ProjectBackground}">
-                <div class="img__background-color">
+                <div class="img__background-color" style="${addClassesIfRepoExist}">
                   <a 
                     href="
                       ${
-                        item.projectRepository === null
-                          ? "#"
+                        item.projectRepository == null
+                          ? "javascript:void(0)"
                           : item.projectRepository
                       }"
-                    target="_blank" 
-                    class="project-item__repository-link">
+                    class="
+                      project-item__repository-link" style=" ${addClassesIfRepoExist}">
                     View on <span class="iconify" data-icon="mdi:github-circle" data-inline="true">
                   </a>
                 </div>
