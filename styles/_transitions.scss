@@ -1,8 +1,40 @@
-#click_projects,#swipe_projects{
-    animation-duration: 1s;
-    animation-iteration-count: 5;
+.project-item__img:hover {
+  .project-item__repository-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+    .iconify {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .img__background-color {
+    background: $bg-color2;
+  }
 }
 
-.hidden-section{
-    display: none;
+.project-item__title:hover {
+  font-weight: bold;
+  color: $color1;
+}
+
+.project-item__repository-link:active {
+  background: $color3;
+}
+
+.project-item__title:active {
+  color: $color3;
+}
+
+#click_projects,
+#swipe_projects {
+  animation-duration: 1s;
+  animation-iteration-count: 5;
+}
+
+.hidden-section {
+  display: none;
 }

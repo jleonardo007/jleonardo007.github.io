@@ -1,86 +1,150 @@
 //Common layout rules
-.developer-section{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.developer-section-bg {
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    background: url("/../images/dev-section-backgrounds/background-mobile.jpg");
+    background-size: cover;
+  }
 
-    #title{
-        margin-bottom: 1rem;
-        padding: .5rem;
-        text-align: center;
-    }
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    background: url("/../images/dev-section-backgrounds/background-tablets.jpg");
+    background-size: cover;
+  }
 
-    #description{
-        margin-bottom: 2rem;
-        padding: 1rem;
-        text-align: center;
-    }
+  @media screen and (min-width: 769px) and (max-width: 1440px) {
+    background: url("/../images/dev-section-backgrounds/background-desktop.jpg");
+    background-size: cover;
+  }
 
-    #click_projects{
-        cursor: pointer;
-    }
-    
+  @media screen and (min-width: 1441px) {
+    background: url("/../images/dev-section-backgrounds/background-bigger_screens.jpg");
+    background-size: cover;
+  }
 }
 
-//Layout rules for mobiles devices and tablet's
-@media screen and (max-width: 768px){
-    #title{
-        font-size: var(--fz-medium);
-    }
+.developer-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    #description{
-        font-size: var(--fz-small);
-    }
-    
-    #swipe_projects{
-        font-size: 1rem;
+  &__title {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
 
-        .iconify{
-            font-size: .75rem;
-        }
-    }
+  &__description {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
 
-    #click_projects{
-        display: none;
-    }
+  &__projects-btn {
+    cursor: pointer;
+  }
 }
 
-//Layout rules for desktops and laptops
-@media screen and (min-width: 800px) and (max-width: 2000px){
-
-    #title{
-        font-size: var(--fz-large);
+//Layout rules for mobile devices
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .developer-section {
+    &__title {
+      font-size: var(--fz-medium);
     }
 
-    #description{
-        font-size: var(--fz-small);
+    &__description {
+      font-size: var(--fz-small);
     }
 
-    #swipe_projects{ display: none;}
+    &__swipe-projects {
+      font-size: 1rem;
 
-    #click_projects{
-        font-size: var(--fz-medium);
+      .iconify {
+        font-size: 0.75rem;
+      }
     }
 
+    &__projects-btn {
+      display: none;
+    }
+  }
 }
 
-//Layout rules for bigger screens
-@media screen and (min-width:2001px){
-
-    #title{
-        font-size: var(--fz-xlarge);
+//Layout rules for tablets and ipads
+@media screen and (min-width: 481px) and (max-width: 769px) {
+  .developer-section {
+    &__title {
+      font-size: var(--fz-large);
     }
 
-    #description{
-        font-size: var(--fz-medium);
+    &__description {
+      font-size: var(--fz-medium);
     }
 
-    #swipe_projects{ display: none;}
+    &__swipe-projects {
+      font-size: var(--fz-small);
 
-    #click_projects{
-        font-size: var(--fz-large);
+      .iconify {
+        font-size: 0.75rem;
+      }
     }
 
+    &__projects-btn {
+      display: none;
+    }
+  }
+}
+
+//Layout rules for small screens and laptops
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .developer-section {
+    &__title {
+      font-size: var(--fz-large);
+    }
+
+    &__description,
+    &__projects-btn {
+      font-size: var(--fz-medium);
+    }
+
+    &__swipe-projects {
+      display: none;
+    }
+  }
+}
+
+///Layout rules for desktop and large screens
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .developer-section {
+    &__title {
+      font-size: var(--fz-large);
+    }
+
+    &__description,
+    &__projects-btn {
+      font-size: var(--fz-medium);
+    }
+
+    &__swipe-projects {
+      display: none;
+    }
+  }
+}
+
+//Layout rules for xlarge screens and TVs
+@media screen and (min-width: 1441px) {
+  .developer-section {
+    &__title {
+      font-size: var(--fz-xlarge);
+    }
+
+    &__description,
+    &__projects-btn {
+      font-size: var(--fz-large);
+    }
+
+    &__swipe-projects {
+      display: none;
+    }
+  }
 }

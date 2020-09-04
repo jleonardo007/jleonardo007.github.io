@@ -10,44 +10,56 @@
     <link rel="stylesheet" href="./styles/css/main.min.css">
 </head>
 <body>
-    <div class="developer-section animated fadeInDown" id="developer">
-        <h1 id="title">Hello, I'm Leonardo</h1>
-        <p id="description">and i am a Front End developer</p>
-        <p id="swipe_projects" class="animated pulse">
-            <span class="iconify" data-icon="vaadin:angle-double-left" data-inline="false"></span>
-            Swipe to view projects
-            <span class="iconify" data-icon="vaadin-angle-double-right" data-inline="false"></span>
-        </p>
-        <a href="javascript:void(0)" id="click_projects" class="animated pulse"><span class="iconify" data-icon="fa:angle-double-down" data-inline="false"></span></a>
+    <div class="developer-section-bg animated fadeInDown">
+        <section class="developer-section" id="developer">
+            <h1 class="developer-section__title">Hello, I'm Leonardo</h1>
+            <p class="developer-section__description">and i am a Frontend developer</p>
+            <p id="swipe_projects" class="developer-section__swipe-projects animated pulse">
+                <span class="iconify" data-icon="vaadin:angle-double-left" data-inline="false"></span>
+                    Swipe to view projects
+                <span class="iconify" data-icon="vaadin-angle-double-right" data-inline="false"></span>
+            </p>
+            <a href="javascript:void(0)" id="click_projects" class="developer-section__projects-btn animated pulse"><span class="iconify" data-icon="fa:angle-double-down" data-inline="false"></span></a>
+        </section>
     </div>
 
-    <div class="projects-section hidden-section animated fadeInDown" id="dev-projects">
-        <div id="indicator"></div>
-        <h1 class="projects-header" class="animated fadeIn">Projects</h1>
-    </div>
+    <section class="projects-section hidden-section animated fadeInDown" id="dev-projects">
+        <div class="header">
+            <div class="header__indicator" id="indicator"></div>
+            <h1 class="header__title" class="animated fadeIn">Projects</h1>
+        </div>
+        <section class="projects-container"></section>
+    </section>
 
-    <div class="about-section hidden-section animated fadeInDown" id="about">
-        <h2>My skills</h2>
-        <div class="stack">
-            <span class="iconify" data-icon="bx:bxl-react" data-inline="false"></span>
-            <span class="iconify" data-icon="bx:bxl-redux" data-inline="false"></span>
-            <span class="iconify" data-icon="fa-brands:sass" data-inline="false"></span>
-            <span class="iconify" data-icon="ant-design:html5-fill" data-inline="false"></span>
-            <span class="iconify" data-icon="bx:bxl-css3" data-inline="false"></span>
-            <span class="iconify" data-icon="bx:bxl-javascript" data-inline="false"></span>
-            <span class="iconify" data-icon="bx:bxl-nodejs" data-inline="false"></span>
-            <span class="iconify" data-icon="bx:bxl-git" data-inline="false"></span>
-            <span class="iconify" data-icon="mdi:webpack" data-inline="false"></span>
+    <section class="about-section hidden-section animated fadeInDown" id="about">
+        <div class="about-section__stack">
+            <h2>My skills</h2>
+            <div class="stack__tools">
+                <span class="iconify" data-icon="bx:bxl-react" data-inline="false"></span>
+                <span class="iconify" data-icon="bx:bxl-redux" data-inline="false"></span>
+                <span class="iconify" data-icon="fa-brands:sass" data-inline="false"></span>
+                <span class="iconify" data-icon="ant-design:html5-fill" data-inline="false"></span>
+                <span class="iconify" data-icon="bx:bxl-css3" data-inline="false"></span>
+                <span class="iconify" data-icon="bx:bxl-javascript" data-inline="false"></span>
+                <span class="iconify" data-icon="bx:bxl-nodejs" data-inline="false"></span>
+                <span class="iconify" data-icon="bx:bxl-git" data-inline="false"></span>
+                <span class="iconify" data-icon="mdi:webpack" data-inline="false"></span>
+            </div>
         </div>
-        <h3>Let's work together</h3>
-        <div class="social-media">
-            <a href="https://github.com/jleonardo007" target="_blank"><span class="iconify" data-icon="mdi:github-circle" data-inline="false"></span></a>
-            <a href="https://codepen.io/jleonardo007" target="_blank"><span class="iconify" data-icon="mdi:codepen" data-inline="false"></span></a>
-            <a href="https://www.freecodecamp.org/jleo92" target="_blank"><span class="iconify" data-icon="fa-brands:free-code-camp" data-inline="false"></span></a>
-            <a href="https://www.linkedin.com/in/jleonardo-bravo/" target="_blank"><span class="iconify" data-icon="mdi:linkedin" data-inline="false"></span></a>
+        <div class="about-section__contact">
+            <div class="contact-container">
+               <div class="contact-container__social-media">
+                    <h3>Let's work together</h3>
+                    <a href="https://github.com/jleonardo007" target="_blank"><span class="iconify" data-icon="mdi:github-circle" data-inline="false"></span></a>
+                    <a href="https://codepen.io/jleonardo007" target="_blank"><span class="iconify" data-icon="mdi:codepen" data-inline="false"></span></a>
+                    <a href="https://www.freecodecamp.org/jleo92" target="_blank"><span class="iconify" data-icon="fa-brands:free-code-camp" data-inline="false"></span></a>
+                    <a href="https://www.linkedin.com/in/jleonardo-bravo/" target="_blank"><span class="iconify" data-icon="mdi:linkedin" data-inline="false"></span></a>
+               </div>
+                <p class="contact-container__email">You can send me a email to: <span class="email">j.leonardo.bravo@gmail.com</span></p>
+            </div>
+            
         </div>
-        <p>You can send me a email to: <span class="email">j.leonardo.bravo@gmail.com</span></p>
-    </div>
+    </section>
 <script type="module" src="./js/projects_collection.js"></script>
 <script type="module" src="./js/ui.js"></script>
 <script type="module" src="./js/app.js"></script>

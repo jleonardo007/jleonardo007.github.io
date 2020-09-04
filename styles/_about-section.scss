@@ -1,77 +1,233 @@
-.about-section{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+//Common layout rules
+.about-section {
+  min-height: 100vh;
+
+  &__stack,
+  &__contact {
+    min-height: 50vh;
+    margin: 0 auto;
+
+    h2 {
+      padding: 1rem 0;
+      text-align: center;
+      word-wrap: break-word;
+    }
+  }
+
+  .stack__tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
     align-items: center;
-    padding: 1rem;
-
-    h2{
-        font-size: var(--fz-medium);
-        text-align: center;
-
-    }
-
-    h3{
-        margin-bottom: 1rem;
-        text-align: center;
-        font-size: var(--fz-small);
-    }
-
-    .stack{
-        height: 50vh;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        justify-items: center;
-        align-items: center;
-        margin-bottom: 1rem;
-
-        .iconify{
-            font-size: var(--fz-large);
-        }
-        
-    }
-
-    .social-media{
-        text-align: center;
-       
-        .iconify{
-            font-size: var(--fz-medium);
-        }
-    }
-
-    p{
-        text-align: center;
-        font-size: 1rem;
-        font-weight: bold;
-        padding: 1rem;
-        .email{
-            font-size: 1rem;
-        }
-    }
+  }
 }
 
-//Layout for bigger screens
-@media screen and (min-width: 2001px){
-    .about-section{
+//Layout rules for mobile devices
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .about-section__stack {
+    .stack__tools {
+      width: 300px;
+      height: 250px;
+      margin: 0 auto;
 
-        h2{
-            font-size: var(--fz-xlarge);
-        }
-
-        h3{
-            font-size: var(--fz-medium);
-        }
-        
-        .iconify{
-            font-size: var(--fz-xlarge);
-        }
-        
-        p{
-            font-size: var(--fz-medium);
-            .email{
-                font-size: var(--fz-small);
-            }
-        }
+      .iconify {
+        font-size: var(--fz-medium);
+      }
     }
+  }
+
+  .about-section__contact {
+    .contact-container {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+
+      &__social-media {
+        height: 150px;
+        text-align: center;
+
+        .iconify {
+          font-size: var(--fz-medium);
+        }
+      }
+
+      &__email {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//Layout rules for tablets and ipads
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: var(--fz-medium);
+  }
+
+  .about-section__stack {
+    .stack__tools {
+      width: 500px;
+      height: 350px;
+      margin: 0 auto;
+
+      .iconify {
+        font-size: var(--fz-large);
+      }
+    }
+  }
+
+  .about-section__contact {
+    .contact-container {
+      width: 600px;
+      height: 450px;
+      margin: 0 auto;
+
+      &__social-media {
+        height: 200px;
+        text-align: center;
+
+        .iconify {
+          font-size: var(--fz-large);
+        }
+      }
+
+      &__email {
+        text-align: center;
+        font-size: var(--fz-small);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//Layout rules for small screens and laptops
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  h2,
+  h3 {
+    font-size: var(--fz-medium);
+  }
+
+  .about-section__stack {
+    .stack__tools {
+      width: 500px;
+      height: 280px;
+      margin: 0 auto;
+
+      .iconify {
+        font-size: var(--fz-large);
+      }
+    }
+  }
+
+  .about-section__contact {
+    .contact-container {
+      width: 600px;
+      height: 300px;
+      margin: 0 auto;
+
+      &__social-media {
+        height: 180px;
+        text-align: center;
+
+        .iconify {
+          font-size: var(--fz-large);
+        }
+      }
+
+      &__email {
+        text-align: center;
+        font-size: var(--fz-small);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//Layout rules for desktop and large screens
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  h2,
+  h3 {
+    font-size: var(--fz-medium);
+  }
+
+  .about-section__stack {
+    .stack__tools {
+      width: 500px;
+      height: 280px;
+      margin: 0 auto;
+
+      .iconify {
+        font-size: var(--fz-large);
+      }
+    }
+  }
+
+  .about-section__contact {
+    .contact-container {
+      width: 600px;
+      height: 200px;
+      margin: 0 auto;
+
+      &__social-media {
+        height: 180px;
+        text-align: center;
+
+        .iconify {
+          font-size: var(--fz-large);
+        }
+      }
+
+      &__email {
+        text-align: center;
+        font-size: var(--fz-small);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//Layout rules for xlarge screens and TVs
+@media screen and (min-width: 1441px) {
+  h2,
+  h3 {
+    font-size: var(--fz-large);
+  }
+
+  .about-section__stack {
+    .stack__tools {
+      width: 1000px;
+      height: 550px;
+      margin: 0 auto;
+
+      .iconify {
+        font-size: var(--fz-xlarge);
+      }
+    }
+  }
+
+  .about-section__contact {
+    .contact-container {
+      width: 1000px;
+      height: 600px;
+      margin: 0 auto;
+
+      &__social-media {
+        height: 300px;
+        text-align: center;
+
+        .iconify {
+          font-size: var(--fz-xlarge);
+        }
+      }
+
+      &__email {
+        text-align: center;
+        font-size: var(--fz-medium);
+        font-weight: bold;
+      }
+    }
+  }
 }

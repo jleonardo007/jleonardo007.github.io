@@ -1,44 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
-:root{
-    --fz-small: 1.25rem;
-    --fz-medium: 2.5rem;
-    --fz-large: 4rem;
-    --fz-xlarge: 6rem;
+:root {
+  --fz-small: 1.5rem;
+  --fz-medium: 3rem;
+  --fz-large: 5rem;
+  --fz-xlarge: 10rem;
 }
 
-html{
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-size: 16px;
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
 }
 
-*,*::before,*::after{
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Roboto Mono', monospace;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-    
-}
-
-a{
-    text-decoration: none;
-    &:visited{
-        color: #fff;
-    }
+body {
+  font-family: "Roboto Mono", monospace;
 }
 
 @import "./dev-section";
 @import "./projects-section";
 @import "./about-section";
 @import "./color-theme";
-@import "./transitions"
+@import "./transitions";

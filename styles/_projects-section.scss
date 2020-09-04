@@ -1,46 +1,221 @@
 //Common layout rules
-$boder-color: #5a4894;
-$indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
-
 .projects-section {
   min-height: 100vh;
+}
 
-  .projects-header {
-    margin-bottom: 1rem;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: var(--fz-medium);
-  }
+.header__indicator {
+  display: none;
+  width: 0%;
+  height: 5px;
+  position: sticky;
+  top: 0;
+}
 
-  #indicator {
-    display: none;
-    width: 0%;
-    position: sticky;
-    top: 0;
-    height: 5px;
-    background: $indicator-color;
+.header__title {
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--fz-medium);
+}
+
+.project-item__repository-link {
+  display: none;
+  width: 35%;
+  height: 20%;
+  border-radius: 0.7rem;
+  line-height: 15%;
+}
+
+.img__background-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+//Indicator bar on mobile devices, ipads and tablets
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header__indicator {
+    display: block;
   }
 }
 
-//layout rules for mobile devices and tablet's
-@media screen and (max-width: 768px) {
-  .projects-section {
-    #indicator {
-      display: block;
+//Layout rules for mobile devices
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .header {
+    height: 15vh;
+
+    &__title {
+      font-size: var(--fz-small);
+    }
+  }
+
+  .projects-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 85vh;
+
+    .project-item {
+      width: 300px;
+      //margin: 0 auto;
+
+      &__img {
+        width: 100%;
+        height: 180px;
+      }
+
+      &__demo-link {
+        display: none;
+      }
+
+      &__title {
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+      }
     }
   }
 }
 
-//Layout rules for desktops and laptops
-@media screen and (min-width: 800px) and (max-width: 2000px) {
-  .projects-section {
-    //Add new projects section layout
+//Layout rules for tablets and ipads
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    height: 15vh;
+  }
+
+  .projects-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 85vh;
+
+    .project-item {
+      width: 500px;
+
+      &__img {
+        width: 100%;
+        height: 250px;
+      }
+
+      &__demo-link {
+        display: none;
+      }
+
+      &__title {
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        font-size: var(--fz-small);
+      }
+    }
   }
 }
 
-//Bigger screens
-@media screen and (min-width: 2001px) {
-  .projects-section {
-    //Add new projects section layout
+//Layout rules for small screens and laptops
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    height: 10vh;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 90vh;
+
+    .project-item {
+      min-width: 400px;
+
+      &__img {
+        width: 100%;
+        height: 225px;
+      }
+
+      &__title {
+        display: block;
+        width: 100%;
+        padding: 0 1rem;
+        line-height: 60px;
+        text-align: center;
+        font-size: var(--fz-small);
+      }
+    }
+  }
+}
+
+//Layout rules for desktop and large screens
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .header {
+    height: 10vh;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 90vh;
+
+    .project-item {
+      min-width: 380px;
+
+      &__img {
+        width: 100%;
+        height: 200px;
+      }
+
+      &__title {
+        display: block;
+        width: 100%;
+        padding: 0 1rem;
+        line-height: 60px;
+        text-align: center;
+        font-size: var(--fz-small);
+      }
+    }
+  }
+}
+
+//Layout rules for xlarge screens and TVs
+@media screen and (min-width: 1441px) {
+  .header {
+    height: 10vh;
+
+    &__title {
+      font-size: var(--fz-large);
+    }
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 90vh;
+
+    .project-item {
+      min-width: 700px;
+
+      &__img {
+        width: 100%;
+        height: 400px;
+      }
+
+      &__title {
+        display: block;
+        width: 100%;
+        line-height: 100px;
+        text-align: center;
+        font-size: var(--fz-medium);
+      }
+    }
   }
 }

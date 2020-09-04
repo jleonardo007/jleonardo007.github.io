@@ -1,40 +1,50 @@
-$bg-color1: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
-$bg-color2: #15202b;
-$font-color1: #1da0f2;
-$font-color2: #fff;
+$indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
+$bg-color1: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+$bg-color2: rgba(#15202b, 0.8);
+$color1: #1da0f2;
+$color2: #fff;
+$color3: #5a4894;
 
-body{
-    background: $bg-color1;
-    color: $font-color2;
+body {
+  background: $bg-color1;
+  color: $color2;
 }
 
-.developer-section{
-    .iconify{
-         color: $font-color1;
-    }
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.projects-section{
-
-    #projects{
-        box-shadow: -15px -10px 20px #000;
-        @media screen and (max-width: 460px) {
-            box-shadow: -5px -5px 15px #000;
-        }
-        .project-stack{
-            background: $bg-color2;
-        }
-
-        .project-title{
-            color: $font-color2;
-            font-weight: bold;
-        }
-    }
+.developer-section {
+  background: $bg-color2;
+  .iconify {
+    color: $color1;
+  }
 }
 
-.about-section{
-    .stack,.email,.iconify{
-        color: $font-color1;
-    }
+.header__indicator {
+  background: $indicator-color;
+}
 
+.project-item {
+  border: 2px solid $color1;
+
+  &__img {
+    border-bottom: 2px solid $color1;
+  }
+
+  &__title {
+    background: $bg-color2;
+  }
+}
+
+.project-item__repository-link {
+  background: $color1;
+}
+.about-section {
+  .stack,
+  .email,
+  .iconify {
+    color: $color1;
+  }
 }
