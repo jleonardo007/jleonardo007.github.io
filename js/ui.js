@@ -21,7 +21,8 @@ export default class UI {
             <article class="project-item">
               <div class="project-item__img" style="${ProjectBackground}">
                 <div class="img__background-color" style="${addClassesIfRepoExist}">
-                  <a 
+                  <a
+                    rel="noopener" 
                     href="
                       ${
                         item.projectRepository == null
@@ -34,7 +35,8 @@ export default class UI {
                   </a>
                 </div>
               </div>
-              <a 
+              <a
+                rel="noopener"
                 href="${item.projectUrl}"
                 target="_blank" 
                 class="project-item__title"
