@@ -71,7 +71,7 @@
 }
 
 //Layout rules for tablets and ipads
-@media screen and (min-width: 481px) and (max-width: 769px) {
+@media screen and (min-width: 481px) and (max-width: 800px) {
   .developer-section {
     &__title {
       font-size: var(--fz-large);
@@ -96,7 +96,7 @@
 }
 
 //Layout rules for small screens and laptops
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 801px) and (max-width: 1024px) {
   .developer-section {
     &__title {
       font-size: var(--fz-large);

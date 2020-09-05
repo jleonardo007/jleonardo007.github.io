@@ -18,6 +18,21 @@
   font-size: var(--fz-medium);
 }
 
+.project-item {
+  border-radius: 1rem;
+
+  &__img,
+  .img__background-color {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  &__title {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+}
+
 .project-item__repository-link {
   display: none;
   width: 35%;
@@ -81,7 +96,7 @@
 }
 
 //Layout rules for tablets and ipads
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 800px) {
   .header {
     height: 15vh;
   }
@@ -116,7 +131,7 @@
 }
 
 //Layout rules for small screens and laptops
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 801px) and (max-width: 1024px) {
   .header {
     height: 10vh;
   }

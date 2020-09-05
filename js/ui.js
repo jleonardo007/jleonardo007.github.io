@@ -22,23 +22,23 @@ export default class UI {
               <div class="project-item__img" style="${ProjectBackground}">
                 <div class="img__background-color" style="${addClassesIfRepoExist}">
                   <a
-                    rel="noopener" 
+                    rel="noopener"
+                    target="_blank"  
                     href="
                       ${
                         item.projectRepository == null
                           ? "javascript:void(0)"
                           : item.projectRepository
                       }"
-                    class="
-                      project-item__repository-link" style=" ${addClassesIfRepoExist}">
+                    class="project-item__repository-link" style=" ${addClassesIfRepoExist}">
                     View on <span class="iconify" data-icon="mdi:github-circle" data-inline="true">
                   </a>
                 </div>
               </div>
               <a
                 rel="noopener"
-                href="${item.projectUrl}"
                 target="_blank" 
+                href="${item.projectUrl}"
                 class="project-item__title"
                 >
                   ${item.title}

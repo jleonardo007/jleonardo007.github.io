@@ -1,9 +1,10 @@
-$indicator-color: linear-gradient(to right, #cb2d3e, #ef473a);
-$bg-color1: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-$bg-color2: rgba(#15202b, 0.8);
-$color1: #1da0f2;
+$indicator-color: linear-gradient(to right, #ff512f, #f09819);
+$bg-color1: linear-gradient(to right, #093028, #237a57);
+$bg-color2: rgba(#093028, 0.7);
+$bg-color3: #093028;
+$color1: #237a57;
 $color2: #fff;
-$color3: #5a4894;
+$color3: #ff512f;
 
 body {
   background: $bg-color1;
@@ -12,13 +13,13 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: $color2;
 }
 
 .developer-section {
   background: $bg-color2;
   .iconify {
-    color: $color1;
+    color: $color3;
   }
 }
 
@@ -27,14 +28,14 @@ a {
 }
 
 .project-item {
-  border: 2px solid $color1;
+  border: 3px solid $color3;
 
   &__img {
-    border-bottom: 2px solid $color1;
+    border-bottom: 3px solid $color3;
   }
 
   &__title {
-    background: $bg-color2;
+    background: $bg-color3;
   }
 }
 
@@ -45,6 +46,6 @@ a {
   .stack,
   .email,
   .iconify {
-    color: $color1;
+    color: $color3;
   }
 }
