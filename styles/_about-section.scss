@@ -148,6 +148,10 @@
 
 //Layout rules for desktop and large screens
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    overflow: hidden;
+  }
+
   h2,
   h3 {
     font-size: var(--fz-medium);
@@ -168,7 +172,7 @@
   .about-section__contact {
     .contact-container {
       width: 600px;
-      height: 200px;
+      height: 250px;
       margin: 0 auto;
 
       &__social-media {
