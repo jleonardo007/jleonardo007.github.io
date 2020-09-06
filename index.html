@@ -15,22 +15,23 @@
     <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
 </head>
 <body>
-    <div class="developer-section-bg animated fadeInDown">
-        <section class="developer-section" id="developer">
+    <section class="developer-section-bg animated fadeInDown">
+        <section class="developer-section">
             <h1 class="developer-section__title">Hello, I'm Leonardo</h1>
             <p class="developer-section__description">and i am a Frontend developer</p>
-            <p id="swipe_projects" class="developer-section__swipe-projects animated pulse">
+            <p class="developer-section__swipe-projects animated pulse">
                 <span class="iconify" data-icon="vaadin:angle-double-left" data-inline="false"></span>
                     Swipe to view projects
                 <span class="iconify" data-icon="vaadin-angle-double-right" data-inline="false"></span>
             </p>
-            <a href="javascript:void(0)" id="click_projects" class="developer-section__projects-btn animated pulse"><span class="iconify" data-icon="fa:angle-double-down" data-inline="false"></span></a>
+            <a href="javascript:void(0)" id="click_projects" class="developer-section__projects-btn animated pulse">
+                <span class="iconify" data-icon="fa:angle-double-down" data-inline="false"></span></a>
         </section>
-    </div>
+    </section>
 
     <section class="projects-section hidden-section animated fadeInDown" id="dev-projects">
         <div class="header">
-            <div class="header__indicator" id="indicator"></div>
+            <div class="header__progress-bar" id="progress_bar"></div>
             <h1 class="header__title" class="animated fadeIn">Projects</h1>
         </div>
         <section class="projects-container"></section>

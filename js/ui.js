@@ -1,7 +1,7 @@
 import projectsCollection from "./projects_collection.js";
 
 const projects = document.querySelector(".projects-container");
-const indicator = document.getElementById("indicator");
+const progressBar = document.getElementById("progress_bar");
 
 export default class UI {
   addProjects = (index) => {
@@ -23,7 +23,7 @@ export default class UI {
                 <div class="img__background-color" style="${addClassesIfRepoExist}">
                   <a
                     rel="noopener"
-                    target="_blank"  
+                    target="_blank"
                     href="
                       ${
                         item.projectRepository == null
@@ -52,10 +52,10 @@ export default class UI {
     showSection.classList.remove("hidden-section");
   };
 
-  handleIndicator = (index) => {
+  handleProgressBar = (index) => {
     let maxWidth = projectsCollection.length;
-    let width = Math.round(((index + 1) * 100) / maxWidth);
+    let currentWidth = Math.round(((index + 1) * 100) / maxWidth);
 
-    indicator.style.width = `${Math.round(width)}%`;
+    progressBar.style.width = `${currentWidth}%`;
   };
 }
