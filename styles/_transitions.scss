@@ -1,13 +1,30 @@
+.developer-section {
+  &__swipe-projects,
+  &__projects-btn {
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+  }
+}
+
 .project-item__img:hover {
   .project-item__repository-link {
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    @media screen and (min-width: 1441px) {
+      font-size: var(--fz-small);
+      border-radius: 3rem;
+    }
 
     .iconify {
       font-size: 1.5rem;
       margin-left: 0.5rem;
+
+      @media screen and (min-width: 1441px) {
+        font-size: 3rem;
+        margin-left: 1rem;
+      }
     }
   }
 
@@ -27,12 +44,6 @@
 
 .project-item__title:active {
   color: $color3;
-}
-
-#click_projects,
-#swipe_projects {
-  animation-duration: 1s;
-  animation-iteration-count: 5;
 }
 
 .hidden-section {

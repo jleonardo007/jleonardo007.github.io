@@ -1,6 +1,6 @@
-$indicator-color: linear-gradient(to right, #ff512f, #f09819);
+$progress-bar-color: linear-gradient(to right, #ff512f, #f09819);
 $bg-color1: linear-gradient(to right, #093028, #237a57);
-$bg-color2: rgba(#093028, 0.7);
+$bg-color2: rgba(#093028, 0.8);
 $bg-color3: #093028;
 $color1: #237a57;
 $color2: #fff;
@@ -23,8 +23,8 @@ a {
   }
 }
 
-.header__indicator {
-  background: $indicator-color;
+.header__progress-bar {
+  background: $progress-bar-color;
 }
 
 .project-item {

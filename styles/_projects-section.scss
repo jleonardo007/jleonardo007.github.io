@@ -3,8 +3,7 @@
   min-height: 100vh;
 }
 
-.header__indicator {
-  display: none;
+.header__progress-bar {
   width: 0%;
   height: 5px;
   position: sticky;
@@ -35,10 +34,10 @@
 
 .project-item__repository-link {
   display: none;
-  width: 35%;
-  height: 20%;
-  border-radius: 0.7rem;
-  line-height: 15%;
+  width: 40%;
+  height: 25%;
+  border-radius: 2rem;
+  //line-height: 15%;
 }
 
 .img__background-color {
@@ -47,13 +46,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-//Indicator bar on mobile devices, ipads and tablets
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .header__indicator {
-    display: block;
-  }
 }
 
 //Layout rules for mobile devices
