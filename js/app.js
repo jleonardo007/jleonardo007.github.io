@@ -20,7 +20,7 @@ let currentY = 0;
 let diffY = 0;
 let isPushed = false;
 
-const restetSwipeParameters = () => {
+const resetSwipeParameters = () => {
   referenceX = 0;
   currentX = 0;
   diffX = 0;
@@ -33,8 +33,7 @@ const restetSwipeParameters = () => {
 //Click the angle-down button to show projects section
 click.addEventListener("click", () => {
   ui.toggleSections(devSection, projectsSection);
-  ui.handleProgressBar(projectIndex);
-  ui.addProjects(projectIndex);
+  ui.getProjectsCollectionSlice("next");
 });
 
 //Handle mouse wheel detection
@@ -43,47 +42,37 @@ document.addEventListener("wheel", (e) => {
     case devSection:
       if (e.deltaY > 0) {
         ui.toggleSections(devSection, projectsSection);
+        ui.getProjectsCollectionSlice("next");
       }
-      ui.handleProgressBar(projectIndex);
-      ui.addProjects(projectIndex);
       break;
 
     case projectsSection:
       if (e.deltaY < 0) {
-        projectIndex--;
-        if (projectIndex < 0) {
-          projectIndex = 0;
-          showDevSection = true;
-        }
+        showDevSection = ui.start == 0 ? true : false;
+        ui.getProjectsCollectionSlice("previous");
       } else {
-        projectIndex++;
-        if (projectIndex > projects.length - 1) {
-          projectIndex = projects.length - 1;
-          showAboutSection = true;
-        }
+        showAboutSection = ui.end >= ui.projectsAmound ? true : false;
+        ui.getProjectsCollectionSlice("next");
       }
 
-      if (e.deltaY < 0 && showDevSection) {
+      if (showDevSection) {
         ui.toggleSections(projectsSection, devSection);
+        ui.start = 0;
+        ui.end = 0;
         showDevSection = false;
       }
 
-      if (e.deltaY > 0 && showAboutSection) {
+      if (showAboutSection) {
         ui.toggleSections(projectsSection, aboutSection);
         showAboutSection = false;
       }
-
-      ui.addProjects(projectIndex);
-      ui.handleProgressBar(projectIndex);
       break;
 
     case aboutSection:
       if (e.deltaY < 0) {
-        projectIndex = projects.length - 1;
         ui.toggleSections(aboutSection, projectsSection);
+        ui.getProjectsCollectionSlice("previous");
       }
-
-      ui.addProjects(projectIndex);
       break;
   }
 });
@@ -101,59 +90,48 @@ document.addEventListener("touchmove", (e) => {
   diffY = currentY - referenceY;
 
   if (!isPushed) {
+    //diffY = -+5 prevents vertical swipe
     switch (e.target.offsetParent) {
       case devSection:
         if (diffX < 0 && diffY > -5 && diffY < 5) {
-          projectIndex--;
-          if (projectIndex < 0) {
-            projectIndex = 0;
-          }
+          ui.getProjectsCollectionSlice("next");
+          ui.toggleSections(devSection, projectsSection);
         }
-        ui.addProjects(projectIndex);
-        ui.toggleSections(devSection, projectsSection);
         break;
 
       case projectsSection:
         if (diffX < 0 && diffY > -5 && diffY < 5) {
-          projectIndex++;
-          if (projectIndex > projects.length - 1) {
-            projectIndex = projects.length - 1;
-            showAboutSection = true;
-          }
+          showAboutSection = ui.end >= ui.projectsAmound ? true : false;
+          ui.getProjectsCollectionSlice("next");
         } else if (diffY > -5 && diffY < 5) {
-          projectIndex--;
-          if (projectIndex < 0) {
-            projectIndex = 0;
-            showDevSection = true;
-          }
+          showDevSection = ui.start == 0 ? true : false;
+          ui.getProjectsCollectionSlice("previous");
         }
 
-        if (diffX > 0 && showDevSection) {
+        if (showDevSection) {
           ui.toggleSections(projectsSection, devSection);
+          ui.start = 0;
+          ui.end = 0;
           showDevSection = false;
         }
 
-        if (diffX < 0 && showAboutSection) {
+        if (showAboutSection) {
           ui.toggleSections(projectsSection, aboutSection);
           showAboutSection = false;
         }
-        ui.addProjects(projectIndex);
-        ui.handleProgressBar(projectIndex);
         break;
 
       case aboutSection:
         if (diffX > 0 && diffY > -5 && diffY < 5) {
-          projectIndex = projects.length - 1;
+          ui.getProjectsCollectionSlice("previous");
           ui.toggleSections(aboutSection, projectsSection);
         }
-        ui.addProjects(projectIndex);
-        ui.handleProgressBar(projectIndex);
         break;
     }
     isPushed = true;
   }
 });
 
-document.addEventListener("touchend", (e) => {
-  restetSwipeParameters();
+document.addEventListener("touchend", () => {
+  resetSwipeParameters();
 });
