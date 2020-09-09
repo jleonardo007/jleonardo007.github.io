@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Frontend Developer, tech enthusiast">
+    <meta name="keyword" content="portfolio, javascript, frontend, developer">
     <title>Leonardo Bravo Portfolio</title>
     <!-- Page favicon -->
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
-    <!-- AnimateCSS library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- Portfolio page styles -->
     <link rel="stylesheet" href="./styles/css/main.min.css">
-     <!--Pages icons  -->
-    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <!-- AnimateCSS library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
 </head>
 <body>
     <section class="developer-section-bg animated fadeInDown">
@@ -21,61 +21,63 @@
             <p class="developer-section__description">and i am a Frontend developer</p>
             <p class="developer-section__swipe-projects animated pulse">
                 <span class="iconify" data-icon="vaadin:angle-double-left" data-inline="false"></span>
-                    Swipe to view projects
+                Swipe to view projects
                 <span class="iconify" data-icon="vaadin-angle-double-right" data-inline="false"></span>
             </p>
-            <a href="javascript:void(0)" id="click_projects" class="developer-section__projects-btn animated pulse">
+            <a href="javascript:void(0)" id="click_projects" class="developer-section__projects-btn animated pulse" aria-label="view projects">
                 <span class="iconify" data-icon="fa:angle-double-down" data-inline="false"></span></a>
+            </section>
         </section>
-    </section>
-
-    <section class="projects-section hidden-section animated fadeInDown" id="dev-projects">
-        <div class="header">
-            <div class="header__progress-bar" id="progress_bar"></div>
-            <h1 class="header__title" class="animated fadeIn">Projects</h1>
-        </div>
-        <section class="projects-container"></section>
-    </section>
-
-    <section class="about-section hidden-section animated fadeInDown" id="about">
-        <div class="about-section__stack">
-            <h2>My skills</h2>
-            <div class="stack__tools">
-                <span class="iconify" data-icon="bx:bxl-react" data-inline="false"></span>
-                <span class="iconify" data-icon="bx:bxl-redux" data-inline="false"></span>
-                <span class="iconify" data-icon="fa-brands:sass" data-inline="false"></span>
-                <span class="iconify" data-icon="ant-design:html5-fill" data-inline="false"></span>
-                <span class="iconify" data-icon="bx:bxl-css3" data-inline="false"></span>
-                <span class="iconify" data-icon="bx:bxl-javascript" data-inline="false"></span>
-                <span class="iconify" data-icon="bx:bxl-nodejs" data-inline="false"></span>
-                <span class="iconify" data-icon="bx:bxl-git" data-inline="false"></span>
-                <span class="iconify" data-icon="mdi:webpack" data-inline="false"></span>
+        
+        <section class="projects-section hidden-section animated fadeInDown" id="dev-projects">
+            <div class="header">
+                <div class="header__progress-bar" id="progress_bar"></div>
+                <h1 class="header__title" class="animated fadeIn">Projects</h1>
             </div>
-        </div>
-        <div class="about-section__contact">
+            <section class="projects-container"></section>
+        </section>
+        
+        <section class="about-section hidden-section animated fadeInDown" id="about">
+            <div class="about-section__stack">
+                <h2>My skills</h2>
+                <div class="stack__tools">
+                    <span class="iconify" data-icon="bx:bxl-react" data-inline="false"></span>
+                    <span class="iconify" data-icon="bx:bxl-redux" data-inline="false"></span>
+                    <span class="iconify" data-icon="fa-brands:sass" data-inline="false"></span>
+                    <span class="iconify" data-icon="ant-design:html5-fill" data-inline="false"></span>
+                    <span class="iconify" data-icon="bx:bxl-css3" data-inline="false"></span>
+                    <span class="iconify" data-icon="bx:bxl-javascript" data-inline="false"></span>
+                    <span class="iconify" data-icon="bx:bxl-nodejs" data-inline="false"></span>
+                    <span class="iconify" data-icon="bx:bxl-git" data-inline="false"></span>
+                    <span class="iconify" data-icon="mdi:webpack" data-inline="false"></span>
+                </div>
+            </div>
+            <div class="about-section__contact">
             <div class="contact-container">
-               <div class="contact-container__social-media">
+                <div class="contact-container__social-media">
                     <h3>Let's work together</h3>
-                    <a rel="noopener" href="https://github.com/jleonardo007" target="_blank">
+                    <a rel="noopener" href="https://github.com/jleonardo007" target="_blank" aria-label="github profile">
                         <span class="iconify" data-icon="mdi:github-circle" data-inline="false"></span>
                     </a>
-                    <a rel="noopener" href="https://codepen.io/jleonardo007" target="_blank">
+                    <a rel="noopener" href="https://codepen.io/jleonardo007" target="_blank" aria-label="codepen profile">
                         <span class="iconify" data-icon="mdi:codepen" data-inline="false"></span>
                     </a>
-                    <a rel="noopener" href="https://www.freecodecamp.org/jleo92" target="_blank">
+                    <a rel="noopener" href="https://www.freecodecamp.org/jleo92" target="_blank" aria-label="free code camp profile">
                         <span class="iconify" data-icon="fa-brands:free-code-camp" data-inline="false"></span>
                     </a>
-                    <a rel="noopener" href="https://www.linkedin.com/in/jleonardo-bravo/" target="_blank">
+                    <a rel="noopener" href="https://www.linkedin.com/in/jleonardo-bravo/" target="_blank" aria-label="linkedin profile">
                         <span class="iconify" data-icon="mdi:linkedin" data-inline="false"></span>
                     </a>
-               </div>
+                </div>
                 <p class="contact-container__email">You can send me a email to: <span class="email">j.leonardo.bravo@gmail.com</span></p>
             </div>
             
         </div>
     </section>
-<script type="module" src="./js/projects_collection.js"></script>
-<script type="module" src="./js/ui.js"></script>
-<script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/projects_collection.js"></script>
+    <script type="module" src="./js/ui.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    <!--Pages icons  -->
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
 </body>
 </html>
