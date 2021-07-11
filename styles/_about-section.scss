@@ -1,236 +1,78 @@
 //Common layout rules
-.about-section {
-  min-height: 100vh;
+.about-section-bg {
+  background: url("/../images/rocket-3.webp");
+  background-size: cover;
+  background-position: center;
+}
 
+.about-section {
   &__stack,
   &__contact {
     min-height: 50vh;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     h2 {
-      padding: 1rem 0;
       text-align: center;
-      word-wrap: break-word;
+      font-size: 3vw;
     }
   }
 
   .stack__tools {
+    width: 60vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-  }
-}
+    place-items: center;
+    font-size: 6vw;
 
-//Layout rules for mobile devices
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .about-section__stack {
-    .stack__tools {
-      width: 300px;
-      height: 250px;
-      margin: 0 auto;
-
-      .iconify {
-        font-size: var(--fz-medium);
-      }
+    .iconify {
+      cursor: pointer;
     }
   }
 
-  .about-section__contact {
-    .contact-container {
-      width: 300px;
-      height: 300px;
-      margin: 0 auto;
+  &__social-media {
+    text-align: center;
+    font-size: 3vw;
+  }
 
-      &__social-media {
-        height: 150px;
-        text-align: center;
+  &__email {
+    text-align: center;
+    font-size: 1.8vw;
 
-        .iconify {
-          font-size: var(--fz-medium);
-        }
-      }
-
-      &__email {
-        text-align: center;
-        font-weight: bold;
-      }
+    .email {
+      font-weight: bold;
+      font-size: 1.2vw;
     }
   }
 }
 
-//Layout rules for tablets and ipads
-@media screen and (min-width: 481px) and (max-width: 800px) {
-  h2,
-  h3 {
-    font-size: var(--fz-medium);
-  }
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  .about-section {
+    &__stack,
+    &__contact {
+      h2 {
+        font-size: 8vw;
+      }
+    }
 
-  .about-section__stack {
     .stack__tools {
-      width: 500px;
-      height: 350px;
-      margin: 0 auto;
-
-      .iconify {
-        font-size: var(--fz-large);
-      }
+      width: 100vw;
+      margin: 0;
+      font-size: 18vw;
     }
-  }
 
-  .about-section__contact {
-    .contact-container {
-      width: 600px;
-      height: 450px;
-      margin: 0 auto;
-
-      &__social-media {
-        height: 200px;
-        text-align: center;
-
-        .iconify {
-          font-size: var(--fz-large);
-        }
-      }
-
-      &__email {
-        text-align: center;
-        font-size: var(--fz-small);
-        font-weight: bold;
-      }
+    &__social-media {
+      font-size: 15vw;
     }
-  }
-}
 
-//Layout rules for small screens and laptops
-@media screen and (min-width: 801px) and (max-width: 1024px) {
-  h2,
-  h3 {
-    font-size: var(--fz-medium);
-  }
+    &__email {
+      font-size: 5.3vw;
 
-  .about-section__stack {
-    .stack__tools {
-      width: 500px;
-      height: 280px;
-      margin: 0 auto;
-
-      .iconify {
-        font-size: var(--fz-large);
-      }
-    }
-  }
-
-  .about-section__contact {
-    .contact-container {
-      width: 600px;
-      height: 300px;
-      margin: 0 auto;
-
-      &__social-media {
-        height: 180px;
-        text-align: center;
-
-        .iconify {
-          font-size: var(--fz-large);
-        }
-      }
-
-      &__email {
-        text-align: center;
-        font-size: var(--fz-small);
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-//Layout rules for desktop and large screens
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  body {
-    overflow: hidden;
-  }
-
-  h2,
-  h3 {
-    font-size: var(--fz-medium);
-  }
-
-  .about-section__stack {
-    .stack__tools {
-      width: 500px;
-      height: 280px;
-      margin: 0 auto;
-
-      .iconify {
-        font-size: var(--fz-large);
-      }
-    }
-  }
-
-  .about-section__contact {
-    .contact-container {
-      width: 600px;
-      height: 250px;
-      margin: 0 auto;
-
-      &__social-media {
-        height: 180px;
-        text-align: center;
-
-        .iconify {
-          font-size: var(--fz-large);
-        }
-      }
-
-      &__email {
-        text-align: center;
-        font-size: var(--fz-small);
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-//Layout rules for xlarge screens and TVs
-@media screen and (min-width: 1441px) {
-  h2,
-  h3 {
-    font-size: var(--fz-large);
-  }
-
-  .about-section__stack {
-    .stack__tools {
-      width: 1000px;
-      height: 550px;
-      margin: 0 auto;
-
-      .iconify {
-        font-size: var(--fz-xlarge);
-      }
-    }
-  }
-
-  .about-section__contact {
-    .contact-container {
-      width: 1000px;
-      height: 600px;
-      margin: 0 auto;
-
-      &__social-media {
-        height: 300px;
-        text-align: center;
-
-        .iconify {
-          font-size: var(--fz-xlarge);
-        }
-      }
-
-      &__email {
-        text-align: center;
-        font-size: var(--fz-medium);
-        font-weight: bold;
+      .email {
+        font-size: 5vw;
       }
     }
   }

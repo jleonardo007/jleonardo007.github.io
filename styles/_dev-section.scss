@@ -1,66 +1,48 @@
 //Common layout rules
 .developer-section-bg {
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-    background: url("/../images/dev-section-backgrounds/background-mobile.jpg");
-    background-size: cover;
-  }
-
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    background: url("/../images/dev-section-backgrounds/background-tablets.jpg");
-    background-size: cover;
-  }
-
-  @media screen and (min-width: 769px) and (max-width: 1440px) {
-    background: url("/../images/dev-section-backgrounds/background-desktop.jpg");
-    background-size: cover;
-  }
-
-  @media screen and (min-width: 1441px) {
-    background: url("/../images/dev-section-backgrounds/background-bigger_screens.jpg");
-    background-size: cover;
-  }
+  background: url("/../images/rocket-1.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 .developer-section {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
 
-  &__title {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    text-align: center;
-  }
-
+  &__title,
   &__description {
     margin-bottom: 2rem;
-    padding: 1rem;
-    text-align: center;
   }
 
   &__projects-btn {
     cursor: pointer;
   }
+
+  &__projects-btn:focus {
+    outline: none;
+  }
 }
 
 //Layout rules for mobile devices
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 1023px) {
   .developer-section {
+    text-align: center;
+
     &__title {
-      font-size: var(--fz-medium);
+      font-size: 13.3vw;
     }
 
     &__description {
-      font-size: var(--fz-small);
+      font-size: 6.67vw;
     }
 
     &__swipe-projects {
-      font-size: 1rem;
+      font-size: 4.4vw;
 
       .iconify {
-        font-size: 0.75rem;
+        font-size: 3.33vw;
       }
     }
 
@@ -70,77 +52,15 @@
   }
 }
 
-//Layout rules for tablets and ipads
-@media screen and (min-width: 481px) and (max-width: 800px) {
+@media screen and (min-width: 1024px) {
   .developer-section {
     &__title {
-      font-size: var(--fz-large);
-    }
-
-    &__description {
-      font-size: var(--fz-medium);
-    }
-
-    &__swipe-projects {
-      font-size: var(--fz-small);
-
-      .iconify {
-        font-size: 0.75rem;
-      }
-    }
-
-    &__projects-btn {
-      display: none;
-    }
-  }
-}
-
-//Layout rules for small screens and laptops
-@media screen and (min-width: 801px) and (max-width: 1024px) {
-  .developer-section {
-    &__title {
-      font-size: var(--fz-large);
+      font-size: 6vw;
     }
 
     &__description,
     &__projects-btn {
-      font-size: var(--fz-medium);
-    }
-
-    &__swipe-projects {
-      display: none;
-    }
-  }
-}
-
-///Layout rules for desktop and large screens
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .developer-section {
-    &__title {
-      font-size: var(--fz-large);
-    }
-
-    &__description,
-    &__projects-btn {
-      font-size: var(--fz-medium);
-    }
-
-    &__swipe-projects {
-      display: none;
-    }
-  }
-}
-
-//Layout rules for xlarge screens and TVs
-@media screen and (min-width: 1441px) {
-  .developer-section {
-    &__title {
-      font-size: var(--fz-xlarge);
-    }
-
-    &__description,
-    &__projects-btn {
-      font-size: var(--fz-large);
+      font-size: 3.6vw;
     }
 
     &__swipe-projects {

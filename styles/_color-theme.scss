@@ -1,13 +1,4 @@
-$progress-bar-color: linear-gradient(to right, #ff512f, #f09819);
-$bg-color1: linear-gradient(to right, #093028, #237a57);
-$bg-color2: rgba(#093028, 0.8);
-$bg-color3: #093028;
-$color1: #237a57;
-$color2: #fff;
-$color3: #ff512f;
-
 body {
-  background: $bg-color1;
   color: $color2;
 }
 
@@ -16,10 +7,19 @@ a {
   color: $color2;
 }
 
-.developer-section {
+.contrast-bg {
   background: $bg-color2;
-  .iconify {
+}
+
+.developer-section {
+  &__projects-btn {
     color: $color3;
+  }
+
+  &__swipe-projects {
+    .iconify {
+      color: $color3;
+    }
   }
 }
 
@@ -28,20 +28,17 @@ a {
 }
 
 .project-item {
-  border: 3px solid $color3;
+  border: 1px solid $color3;
 
   &__img {
-    border-bottom: 3px solid $color3;
-  }
-
-  &__title {
-    background: $bg-color3;
+    border-bottom: 1px solid $color3;
   }
 }
 
 .project-item__repository-link {
   background: $color1;
 }
+
 .about-section {
   .stack,
   .email,

@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
-
-:root {
-  --fz-small: 1.5rem;
-  --fz-medium: 3rem;
-  --fz-large: 5rem;
-  --fz-xlarge: 10rem;
-}
+$progress-bar-color: linear-gradient(to right, #ff512f, #f09819);
+$bg-color1: linear-gradient(to right, #093028, #237a57);
+$bg-color2: rgba(#000, 0.8);
+$bg-color3: #093028;
+$color1: #237a57;
+$color2: #fff;
+$color3: #ff512f;
 
 html {
   box-sizing: border-box;

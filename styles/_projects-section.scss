@@ -1,20 +1,32 @@
 //Common layout rules
+.projects-section-bg {
+  background: url("/../images/rocket-2.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .projects-section {
   min-height: 100vh;
 }
 
-.header__progress-bar {
-  width: 0%;
-  height: 5px;
-  position: sticky;
-  top: 0;
+.header {
+  height: 10vh;
+
+  &__progress-bar {
+    width: 0%;
+    height: 5px;
+    position: sticky;
+    top: 0;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+  }
 }
 
-.header__title {
-  padding: 1rem 0;
-  text-align: center;
-  text-transform: capitalize;
-  font-size: var(--fz-medium);
+.projects-container {
+  height: 90vh;
 }
 
 .project-item {
@@ -27,176 +39,95 @@
   }
 
   &__title {
+    display: grid;
+    place-content: center;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
   }
-}
 
-.project-item__repository-link {
-  display: none;
-  width: 40%;
-  height: 25%;
-  border-radius: 2rem;
-  //line-height: 15%;
-}
+  &__repository-link {
+    display: none;
+    width: 35%;
+    height: 20%;
+    border-radius: 2rem;
+  }
 
-.img__background-color {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  .img__background-color {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
 }
 
 //Layout rules for mobile devices
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 800px) {
   .header {
-    height: 15vh;
-
     &__title {
-      font-size: var(--fz-small);
+      font-size: 5vw;
     }
   }
 
   .projects-container {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 85vh;
 
     .project-item {
-      width: 300px;
-      //margin: 0 auto;
+      width: 80vw;
+      height: 55vw;
+      margin-bottom: 3rem;
 
       &__img {
-        width: 100%;
-        height: 180px;
-      }
-
-      &__demo-link {
-        display: none;
+        height: 44vw;
       }
 
       &__title {
-        display: block;
-        width: 100%;
-        line-height: 40px;
-        text-align: center;
+        height: 11vw;
+        font-size: 4.4vw;
       }
     }
   }
 }
 
-//Layout rules for tablets and ipads
-@media screen and (min-width: 481px) and (max-width: 800px) {
-  .header {
-    height: 15vh;
-  }
-
-  .projects-container {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 85vh;
-
-    .project-item {
-      width: 500px;
-
-      &__img {
-        width: 100%;
-        height: 250px;
-      }
-
-      &__demo-link {
-        display: none;
-      }
-
-      &__title {
-        display: block;
-        width: 100%;
-        line-height: 60px;
-        text-align: center;
-        font-size: var(--fz-small);
-      }
-    }
-  }
-}
-
-//Layout rules for small screens and laptops
+//Layout rules for small screens
 @media screen and (min-width: 801px) and (max-width: 1024px) {
   .header {
-    height: 10vh;
+    &__title {
+      font-size: 4vw;
+    }
   }
 
   .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    height: 90vh;
+    place-items: center;
 
     .project-item {
-      min-width: 400px;
+      width: 45vw;
+      height: 25vw;
 
       &__img {
         width: 100%;
-        height: 225px;
+        height: 20vw;
       }
 
       &__title {
-        display: block;
-        width: 100%;
-        padding: 0 1rem;
-        line-height: 60px;
-        text-align: center;
-        font-size: var(--fz-small);
+        height: 5vw;
+        font-size: 2.5vw;
       }
     }
   }
 }
 
-//Layout rules for desktop and large screens
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) {
   .header {
-    height: 10vh;
-  }
-
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    height: 90vh;
-
-    .project-item {
-      min-width: 380px;
-
-      &__img {
-        width: 100%;
-        height: 200px;
-      }
-
-      &__title {
-        display: block;
-        width: 100%;
-        padding: 0 1rem;
-        line-height: 60px;
-        text-align: center;
-        font-size: var(--fz-small);
-      }
-    }
-  }
-}
-
-//Layout rules for xlarge screens and TVs
-@media screen and (min-width: 1441px) {
-  .header {
-    height: 10vh;
-
     &__title {
-      font-size: var(--fz-large);
+      font-size: 4vw;
+    }
+
+    &__progress-bar {
+      height: 0.4vw;
     }
   }
 
@@ -204,24 +135,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    height: 90vh;
+    place-items: center;
 
     .project-item {
-      min-width: 700px;
+      width: 28vw;
+      height: 16vw;
 
       &__img {
         width: 100%;
-        height: 400px;
+        height: 12.8vw;
       }
 
       &__title {
-        display: block;
-        width: 100%;
-        line-height: 100px;
-        text-align: center;
-        font-size: var(--fz-medium);
+        height: 3.2vw;
+        font-size: 1.8vw;
       }
     }
   }

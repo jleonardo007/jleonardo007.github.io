@@ -1,4 +1,9 @@
 .developer-section {
+  &__projects-btn:focus {
+    outline: none;
+    color: $color2;
+  }
+
   &__swipe-projects,
   &__projects-btn {
     animation-duration: 1s;
@@ -12,8 +17,8 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
+
     @media screen and (min-width: 1441px) {
-      font-size: var(--fz-small);
       border-radius: 3rem;
     }
 
@@ -33,6 +38,11 @@
   }
 }
 
+.project-item__title:focus {
+  outline: none;
+  color: $color3;
+}
+
 .project-item__title:hover {
   font-weight: bold;
   color: $color3;
@@ -44,6 +54,21 @@
 
 .project-item__title:active {
   color: $color3;
+}
+
+.about-section__social-media {
+  a:hover {
+    .iconify {
+      color: $color2;
+    }
+  }
+
+  a:focus {
+    outline: none;
+    .iconify {
+      color: $color2;
+    }
+  }
 }
 
 .hidden-section {
