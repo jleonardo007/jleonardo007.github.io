@@ -21,33 +21,35 @@ export default class UI {
       background-position: center;
     `;
 
-      const addStylesIfRepoExist =
-        item.projectRepository == null ? "display: none" : null;
+      const addStylesIfRepoDoesNotExist = item.projectRepository === null && "display: none";
 
       projectsContainer.innerHTML += `
       
       <article class="project-item animated fadeIn">
         <div class="project-item__img" style="${ProjectImage}">
-            <div class="img__background-color" style="${addStylesIfRepoExist}">
+            <div class="img__background-color" style="${addStylesIfRepoDoesNotExist}">
                <a
+                  class="project-item__repository-link" style=" ${addStylesIfRepoDoesNotExist}"
                   rel="noopener"
                   target="_blank"
+                  tabindex=${index + 1}
                   href="
                     ${
-                      item.projectRepository == null
+                      item.projectRepository === null
                         ? "javascript:void(0)"
                         : item.projectRepository
                     }"
-                  class="project-item__repository-link" style=" ${addStylesIfRepoExist}">
+                  >
                   View on <span class="iconify" data-icon="mdi:github-circle" data-inline="true">
                 </a>
             </div>
         </div>
           <a
-            rel="noopener"
-              target="_blank" 
-              href="${item.projectUrl}"
               class="project-item__title"
+              rel="noopener"
+              target="_blank" 
+              tabindex=${index + 1}
+              href="${item.projectUrl}"
           >
             ${item.title}
           </a>
@@ -58,7 +60,7 @@ export default class UI {
   };
 
   getProjectsCollectionSlice(status) {
-    projectsContainer.innerHTML = " ";
+    projectsContainer.innerHTML = "";
 
     switch (status) {
       case "next":
@@ -111,7 +113,8 @@ export default class UI {
     showSection.classList.remove("hidden-section");
   };
 
-  handleProgressBar = (currentLength) => {
+  handleProgressBar = (end) => {
+    const currentLength = end > this.slice.length ? this.slice.length + this.start : end;
     let maxWidth = projectsCollection.length;
     let currentWidth = Math.round((currentLength * 100) / maxWidth);
 
