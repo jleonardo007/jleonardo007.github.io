@@ -1,13 +1,12 @@
 import UI from "./ui.js";
-import projects from "./projects_collection.js";
 
 const ui = new UI();
-const devSection = document.querySelector(".developer-section-bg");
+const devSection = document.querySelector(".developer-section");
 const projectsSection = document.querySelector(".projects-section");
 const aboutSection = document.querySelector(".about-section");
 const click = document.getElementById("click_projects");
+const body = document.getElementsByTagName("body")[0];
 
-let projectIndex = 0;
 let showDevSection = false;
 let showAboutSection = false;
 
@@ -34,6 +33,55 @@ const resetSwipeParameters = () => {
 click.addEventListener("click", () => {
   ui.toggleSections(devSection, projectsSection);
   ui.getProjectsCollectionSlice("next");
+});
+
+//Handle key arrows detection
+document.addEventListener("keydown", (e) => {
+  const section = e.target;
+  const key = e.key;
+
+  switch (section.id) {
+    case "dev-section":
+      if (key === "ArrowRight") {
+        ui.toggleSections(devSection, projectsSection);
+        ui.getProjectsCollectionSlice("next");
+        section.id = "projects-section";
+      }
+      break;
+
+    case "projects-section":
+      if (key === "ArrowLeft") {
+        showDevSection = ui.start == 0 ? true : false;
+        ui.getProjectsCollectionSlice("previous");
+      }
+      if (key === "ArrowRight") {
+        showAboutSection = ui.end >= ui.projectsAmound ? true : false;
+        ui.getProjectsCollectionSlice("next");
+      }
+
+      if (showDevSection) {
+        ui.toggleSections(projectsSection, devSection);
+        ui.start = 0;
+        ui.end = 0;
+        showDevSection = false;
+        section.id = "dev-section";
+      }
+
+      if (showAboutSection) {
+        ui.toggleSections(projectsSection, aboutSection);
+        showAboutSection = false;
+        section.id = "about-section";
+      }
+      break;
+
+    case "about-section":
+      if (key === "ArrowLeft") {
+        ui.toggleSections(aboutSection, projectsSection);
+        ui.getProjectsCollectionSlice("previous");
+        section.id = "projects-section";
+      }
+      break;
+  }
 });
 
 //Handle mouse wheel detection
@@ -72,6 +120,17 @@ document.addEventListener("wheel", (e) => {
       if (e.deltaY < 0) {
         ui.toggleSections(aboutSection, projectsSection);
         ui.getProjectsCollectionSlice("previous");
+      }
+      break;
+
+    case body:
+      /**
+       * *To future me:
+       * Default case applies only for the devSection target beacause it's offsetParent === body
+       */
+      if (e.deltaY > 0) {
+        ui.toggleSections(devSection, projectsSection);
+        ui.getProjectsCollectionSlice("next");
       }
       break;
   }
@@ -125,6 +184,17 @@ document.addEventListener("touchmove", (e) => {
         if (diffX > 0 && diffY > -5 && diffY < 5) {
           ui.getProjectsCollectionSlice("previous");
           ui.toggleSections(aboutSection, projectsSection);
+        }
+        break;
+
+      case body:
+        /**
+         * *To future me:
+         * Default case applies only for the devSection target beacause it's offsetParent === body
+         */
+        if (diffX < 0 && diffY > -5 && diffY < 5) {
+          ui.getProjectsCollectionSlice("next");
+          ui.toggleSections(devSection, projectsSection);
         }
         break;
     }
