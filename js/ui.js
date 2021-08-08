@@ -20,7 +20,7 @@ export default class UI {
       
         <article class="project-item animated fadeIn">
           <div class="project-item__img-container">
-            <img class="project-item__img" src="${item.imgPath}"/>
+            <img class="project-item__img" src="${item.imgPath}" loading="lazy"/>
             <a
               class="project-item__repository-link" style=" ${addStylesIfRepoDoesNotExist}"
               rel="noopener"
