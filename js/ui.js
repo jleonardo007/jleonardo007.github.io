@@ -14,46 +14,34 @@ export default class UI {
     const sliceCopy = [...projectsCollectionSlice];
 
     sliceCopy.map((item, index) => {
-      const ProjectImage = `
-      background: url(${item.imgPath});
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    `;
-
       const addStylesIfRepoDoesNotExist = item.projectRepository === null && "display: none";
 
       projectsContainer.innerHTML += `
       
-      <article class="project-item animated fadeIn">
-        <div class="project-item__img" style="${ProjectImage}">
-            <div class="img__background-color" style="${addStylesIfRepoDoesNotExist}">
-               <a
-                  class="project-item__repository-link" style=" ${addStylesIfRepoDoesNotExist}"
-                  rel="noopener"
-                  target="_blank"
-                  tabindex=${index + 1}
-                  href="
-                    ${
-                      item.projectRepository === null
-                        ? "javascript:void(0)"
-                        : item.projectRepository
-                    }"
-                  >
-                  View on <span class="iconify" data-icon="mdi:github-circle" data-inline="true">
-                </a>
-            </div>
-        </div>
-          <a
-              class="project-item__title"
+        <article class="project-item animated fadeIn">
+          <div class="project-item__img-container">
+            <img class="project-item__img" src="${item.imgPath}"/>
+            <a
+              class="project-item__repository-link" style=" ${addStylesIfRepoDoesNotExist}"
               rel="noopener"
-              target="_blank" 
+              target="_blank"
               tabindex=${index + 1}
-              href="${item.projectUrl}"
+              href="
+                ${item.projectRepository === null ? "javascript:void(0)" : item.projectRepository}"
+              >
+                View on <span class="iconify" data-icon="mdi:github-circle" data-inline="true">
+            </a>
+          </div>
+          <a
+            class="project-item__title"
+            rel="noopener"
+            target="_blank" 
+            tabindex=${index + 1}
+            href="${item.projectUrl}"
           >
             ${item.title}
           </a>
-      </article>
+        </article>
       
       `;
     });

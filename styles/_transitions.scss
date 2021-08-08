@@ -11,7 +11,15 @@
   }
 }
 
-.project-item__img:hover {
+.project-item:hover {
+  .project-item__img-container {
+    background-color: $bg-color2;
+  }
+
+  .project-item__img {
+    opacity: 0.6;
+  }
+
   .project-item__repository-link {
     display: flex;
     justify-content: center;
@@ -31,10 +39,6 @@
         margin-left: 1rem;
       }
     }
-  }
-
-  .img__background-color {
-    background: $bg-color2;
   }
 }
 

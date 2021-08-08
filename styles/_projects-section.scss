@@ -32,15 +32,24 @@
 .project-item {
   border-radius: 1rem;
 
-  &__img,
-  .img__background-color {
+  &__img-container,
+  &__img {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }
 
+  &__img-container {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: inherit;
+  }
+
   &__title {
     display: grid;
-    place-content: center;
+    place-items: center;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
   }
@@ -50,12 +59,10 @@
     width: 35%;
     height: 20%;
     border-radius: 2rem;
-  }
-
-  .img__background-color {
-    display: grid;
-    place-items: center;
-    height: 100%;
+    position: absolute;
+    top: 40%;
+    right: 30%;
+    z-index: 1;
   }
 }
 
@@ -77,7 +84,7 @@
       height: 55vw;
       margin-bottom: 3rem;
 
-      &__img {
+      &__img-container {
         height: 44vw;
       }
 
@@ -107,8 +114,7 @@
       width: 45vw;
       height: 25vw;
 
-      &__img {
-        width: 100%;
+      &__img-container {
         height: 20vw;
       }
 
@@ -141,8 +147,7 @@
       width: 28vw;
       height: 16vw;
 
-      &__img {
-        width: 100%;
+      &__img-container {
         height: 12.8vw;
       }
 
