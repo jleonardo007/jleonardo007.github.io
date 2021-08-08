@@ -91,6 +91,7 @@ document.addEventListener("wheel", (e) => {
       if (e.deltaY > 0) {
         ui.toggleSections(devSection, projectsSection);
         ui.getProjectsCollectionSlice("next");
+        body.id = "projects-section";
       }
       break;
 
@@ -108,11 +109,13 @@ document.addEventListener("wheel", (e) => {
         ui.start = 0;
         ui.end = 0;
         showDevSection = false;
+        body.id = "dev-section";
       }
 
       if (showAboutSection) {
         ui.toggleSections(projectsSection, aboutSection);
         showAboutSection = false;
+        body.id = "about-section";
       }
       break;
 
@@ -120,6 +123,7 @@ document.addEventListener("wheel", (e) => {
       if (e.deltaY < 0) {
         ui.toggleSections(aboutSection, projectsSection);
         ui.getProjectsCollectionSlice("previous");
+        body.id = "projects-section";
       }
       break;
 
